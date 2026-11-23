@@ -1,14 +1,19 @@
 # tiny-chess-01 entry
 
-A chess engine in a single `main.py` of 4,047 bytes (limit: 4,096), written for
+[![Chess engine in 4 KB on make.fun](https://make.fun/badge/tiny-chess-01.svg)](https://make.fun/bounty/tiny-chess-01)
+[![Rank on make.fun](https://make.fun/badge/tiny-chess-01/Ash9at/makefun-tiny-chess-01/rank.svg)](https://make.fun/bounty/tiny-chess-01)
+[![Reward on make.fun](https://make.fun/badge/tiny-chess-01/Ash9at/makefun-tiny-chess-01/reward.svg)](https://make.fun/bounty/tiny-chess-01)
+
+A chess engine in a single `main.py` of 3,297 bytes (limit: 4,096), written for
 the make.fun bounty "Build the strongest chess engine in 4 KB of Python".
 
 ## How it works
 
-`main.py` is a self-unpacking program: an LZMA-compressed (FORMAT_ALONE,
-preset 9 extreme) + base85-encoded copy of the engine source, unpacked and
-executed at startup via a one-line loader. The decompressed engine uses only
-the Python 3.13 standard library and reads no other file.
+`main.py` is a self-unpacking program packed with the kit's own
+`makefun compress` command: an LZMA-compressed copy of the engine source
+in a `#coding:l1` stub, decompressed and executed at startup. The
+decompressed engine uses only the Python 3.13 standard library and reads
+no other file.
 
 The engine itself:
 
